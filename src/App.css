@@ -32,7 +32,37 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'MontBold';
+  src: url('../src/assets/fonts/Mont-Bold.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MontRegular';
+  src: url('../src/assets/fonts/Mont-Regular.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MontSemibold';
+  src: url('../src/assets/fonts/Mont-SemiBold.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
 }
