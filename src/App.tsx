@@ -3,9 +3,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import Review from './pages/Review';
 import Products from './pages/Products';
 import About from './components/About';
+import AllReviews from './pages/AllReviews';
+import WriteReview from './pages/WriteReview';
 
 const App: React.FC = () => {
   return (
@@ -16,7 +17,8 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products/>} />
-            <Route path="/review" element={<Review />} />
+            <Route path="/all-reviews" element={<AllReviews />} />
+            <Route path="/write-review" element={<WriteReview />} />
             <Route path="/about" element={<About />} />
           </Routes>
         </main>

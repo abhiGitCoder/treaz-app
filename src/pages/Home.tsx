@@ -6,32 +6,32 @@ import About from '../components/About';
 import Services from '../components/Services';
 import Details from '../components/Details';
 import Testimonials from '../components/Testimonials';
-import Review from './Review';
+import Contact from '../components/Contact';
 
 const HomePage: React.FC = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden"> 
       <Banner />
-      <section id="products">
+      <section id="products" className="px-4 md:px-0">
         <HomeProducts />
       </section>
-      <section id="customize-bottle">
+      <section id="custom-bottles" className="px-4 md:px-0">
         <CustomizedBottle />
       </section>
-      <section id="services" >
+      <section id="services" className="px-4 md:px-0">
         <Services />
       </section>
-      <section id="about">
+      <section id="about" className="px-4 md:px-0">
         <About />
       </section>
-      <section id="testimonials">
+      <section id="testimonials" className="px-4 md:px-0">
         <Testimonials />
       </section>
-      <section id="write-a-review">
-        <Review />
-      </section>
-      <section id="details">
+      <section id="details" className="px-4 md:px-0">
         <Details />
+      </section>
+      <section id="contact" className="px-4 md:px-0">
+        <Contact />
       </section>
     </div>
   );

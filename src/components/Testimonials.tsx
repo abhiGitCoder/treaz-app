@@ -9,24 +9,35 @@ const Testimonials: React.FC = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-20 bg-gradient-to-tr from-purple-100 to-purple-100">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-extrabold mb-12 text-center text-blue-800">What Our Customers Say</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+    <div className="bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-8">
+          What Our Customers Say
+        </h2>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white p-8 rounded-2xl shadow-xl transform hover:scale-105 transition duration-300">
-              <p className="text-gray-700 mb-6 italic">"{testimonial.text}"</p>
-              <cite className="block text-right text-blue-600 font-semibold">- {testimonial.author}</cite>
+            <div key={index} className="bg-white rounded-lg shadow-md p-6">
+              <p className="text-gray-600 mb-4">"{testimonial.text}"</p>
+              <p className="font-semibold text-gray-800">- {testimonial.author}</p>
             </div>
           ))}
         </div>
-        <div className="text-center">
-          <Link to="/reviews" className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-full transform hover:scale-105 transition duration-300">
+        <div className="mt-12 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+          <Link
+            to="/reviews"
+            className="w-full sm:w-auto bg-purple-700 text-white font-bold py-3 px-8 rounded-full transform hover:scale-105 transition duration-300 text-center"
+          >
             See All Reviews
+          </Link>
+          <Link
+            to="/write-review"
+            className="w-full sm:w-auto bg-white text-purple-700 font-bold py-3 px-8 rounded-full border border-purple-700 transform hover:scale-105 transition duration-300 text-center"
+          >
+            Write a Review
           </Link>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

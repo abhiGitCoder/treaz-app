@@ -18,20 +18,12 @@ const Details: React.FC = () => {
     setFormData({ name: '', email: '', message: '' });
   };
 
-  const socialLinks = [
-    { name: 'Email', icon: 'https://cdn-icons-png.flaticon.com/512/732/732200.png', url: 'mailto:wecare@treaz.in' },
-    { name: 'WhatsApp', icon: 'https://cdn-icons-png.flaticon.com/512/733/733585.png', url: 'https://wa.me/1234567890' },
-    { name: 'Instagram', icon: 'https://cdn-icons-png.flaticon.com/512/733/733614.png', url: 'https://instagram.com/treaz' },
-    { name: 'Facebook', icon: 'https://cdn-icons-png.flaticon.com/512/733/733547.png', url: 'https://facebook.com/treaz' },
-    { name: 'X', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/70px-X_logo_2023.svg.png', url: 'https://twitter.com/treaz' },
-  ];
-
   return (
     <section id="details" className=" bg-gradient-to-b from-purple-100 via-pink-100 to-blue-100">
       <div className="container mx-auto px-4">
-        <h2 className="text-5xl font-extrabold mb-16 text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Get in Touch</h2>
+        <h2 className="text-5xl font-extrabold mb-14 text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Get in Touch</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 ">
           {/* Contact Information */}
           <div className="bg-white p-8 rounded-2xl shadow-2xl transform transition duration-300">
             <h3 className="text-3xl font-MontBold mb-8 text-indigo-700">Our Details</h3>
@@ -86,21 +78,6 @@ const Details: React.FC = () => {
                 Send Message
               </button>
             </form>
-          </div>
-        </div>
-
-        {/* Social Links */}
-        <div className="mt-16">
-          <h3 className="text-3xl font-bold mb-10 text-center text-indigo-700 font-MontBold">Connect With Us</h3>
-          <div className="flex justify-center space-x-8 font-MontSemibold">
-            {socialLinks.map((link, index) => (
-              <a key={index} href={link.url} className="group flex flex-col items-center transition duration-300 transform hover:scale-110" title={link.name}>
-                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg mb-3 group-hover:bg-gradient-to-r from-purple-400 to-pink-400 transition duration-300">
-                  <img src={link.icon} alt={link.name} className="w-8 h-8" />
-                </div>
-                <span className="text-sm font-medium text-gray-700 group-hover:text-indigo-600">{link.name}</span>
-              </a>
-            ))}
           </div>
         </div>
       </div>

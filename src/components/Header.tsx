@@ -10,7 +10,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-gradient-to-r from-black to-green-900 text-white shadow-md fixed top-0 left-0 w-full z-50">
+    <header className="bg-gradient-to-r from-black to-green-700 text-white shadow-md fixed top-0 left-0 w-full z-50 ">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="logo">
@@ -32,7 +32,7 @@ const Header: React.FC = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:block">
             <ul className="flex space-x-8 font-MontBold">
-              {['Home', 'Products', 'About', 'Services', 'Contact', 'Social', 'Details', 'Testimonials', 'Write a Review'].map((item) => (
+              {['HOME', 'PRODUCTS', 'CUSTOM-BOTTLES', 'SERVICES', 'TESTINOMIALS', 'DETAILS','CONTACT'].map((item) => (
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase().replace(' ', '-')}`}
@@ -48,9 +48,9 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-2 font-MontBold">
+          <nav className="md:hidden mt-2 font-MontBold ">
             <ul className="flex flex-col space-y-2">
-              {['Home', 'Products', 'About', 'Services', 'Contact', 'Social', 'Details', 'Testimonials', 'Write a Review'].map((item) => (
+              {['HOME', 'PRODUCTS', 'CUSTOM-BOTTLES', 'SERVICES', 'TESTINOMIALS', 'DETAILS','CONTACT'].map((item) => (
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase().replace(' ', '-')}`}
