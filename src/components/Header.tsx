@@ -30,9 +30,9 @@ const Header: React.FC = () => {
           </button>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:block">
+          <nav className="hidden md:block"> 
             <ul className="flex space-x-8 font-MontBold">
-              {['HOME', 'PRODUCTS', 'CUSTOM-BOTTLES', 'SERVICES', 'TESTINOMIALS', 'DETAILS','CONTACT'].map((item) => (
+              {['HOME', 'PRODUCTS', 'CUSTOM-BOTTLES', 'SERVICES', 'TESTIMONIALS', 'DETAILS','CONTACT'].map((item) => (
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase().replace(' ', '-')}`}

@@ -13,7 +13,7 @@ const App: React.FC = () => {
     <Router>
       <div className="flex flex-col min-h-screen">
         <Header />
-        <main className="flex-grow">
+        <main className="flex-grow bg-gradient-to-b from-purple-100 via-pink-100 to-blue-100">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products/>} />

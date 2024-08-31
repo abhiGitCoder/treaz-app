@@ -4,7 +4,7 @@ import { bg } from '../utils/data';
 
 const Banner: React.FC = () => {
   return (
-    <section id="home" className="relative h-screen flex flex-col items-center justify-center text-white bg-gray-800">
+    <section id="home" className="relative h-screen flex flex-col items-center justify-center text-white">
       <div 
         className="absolute inset-0 bg-cover bg-center z-0" 
         style={{ backgroundImage: `url(${bg})` }} 

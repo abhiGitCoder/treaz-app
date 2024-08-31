@@ -30,9 +30,9 @@ const CustomizedBottle = () => {
   };
 
   return (
-    <section className="py-12 bg-gray-100">
+    <section className="py- ">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">Customize Your Water Bottle</h2>
+        <h2 className="text-3xl md:text-4xl font-MontBold  mb-8 text-center text-blue-800">Customize Your Water Bottle</h2>
         <div className="flex flex-col md:flex-row items-start justify-center space-y-8 md:space-y-0 md:space-x-12">
           <div className="w-full md:w-1/2 max-w-md">
             <div className="bg-white rounded-lg shadow-lg p-6 space-y-6">

@@ -9,9 +9,9 @@ const Testimonials: React.FC = () => {
   ];
 
   return (
-    <div className="bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className=" py-12 px-4 sm:px-6 lg:px-8 ">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-8">
+        <h2 className="text-4xl font-MontBold text-center mb-8 text-blue-800">
           What Our Customers Say
         </h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -24,14 +24,14 @@ const Testimonials: React.FC = () => {
         </div>
         <div className="mt-12 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
           <Link
-            to="/reviews"
-            className="w-full sm:w-auto bg-purple-700 text-white font-bold py-3 px-8 rounded-full transform hover:scale-105 transition duration-300 text-center"
+            to="/all-reviews"
+            className="w-full sm:w-auto bg-purple-700 text-white font-MontBold py-3 px-8 rounded-full transform hover:scale-105 transition duration-300 text-center"
           >
             See All Reviews
           </Link>
           <Link
             to="/write-review"
-            className="w-full sm:w-auto bg-white text-purple-700 font-bold py-3 px-8 rounded-full border border-purple-700 transform hover:scale-105 transition duration-300 text-center"
+            className="w-full sm:w-auto bg-white text-purple-700 font-MontBold py-3 px-8 rounded-full border border-purple-700 transform hover:scale-105 transition duration-300 text-center"
           >
             Write a Review
           </Link>

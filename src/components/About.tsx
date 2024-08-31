@@ -2,9 +2,9 @@ import React from 'react';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-16 bg-gray-100">
+    <section id="about" className=" ">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center font-MontBold from-purple-100">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-MontBold mb-8 text-center font-MontBold from-purple-100  text-blue-800">
           About Us
         </h2>
         <p className="text-lg md:text-xl lg:text-2xl text-center max-w-3xl mx-auto font-MontRegular">

@@ -55,7 +55,7 @@ const HomeProducts: React.FC = () => {
   };
 
   return (
-    <section id="products" className="py-8 bg-green-50">
+    <section id="products" className="py-8">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-3xl md:text-4xl font-MontBold text-green-800">Our Products</h2>
