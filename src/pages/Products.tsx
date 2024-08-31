@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { banner } from '../utils/data'; 
+import { banner } from '../utils/data';
 
 const Products: React.FC = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -15,6 +15,7 @@ const Products: React.FC = () => {
   const products = [
     { name: 'Natural Spring Water', size: '500ml', image: banner },
     { name: 'Still Mineral Water', size: '750ml', image: banner },
+    { name: 'Sparkling Mineral Water', size: '1L', image: banner },
     { name: 'Sparkling Mineral Water', size: '1L', image: banner },
   ];
 
@@ -32,7 +33,6 @@ const Products: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here, you would handle form submission, e.g., sending data to a server
     setMessage('Your order has been placed successfully!');
     setFormData({
       name: '',
@@ -43,29 +43,45 @@ const Products: React.FC = () => {
     setIsPopupOpen(false);
   };
 
+  const handleCancelOrder = () => {
+    setIsPopupOpen(false);
+    setFormData({
+      name: '',
+      mobile: '',
+      email: '',
+      bottleName: ''
+    });
+  };
+
   return (
-    <section id="products" className="py-4">
+    <section id="products" className="py-8 bg-green-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl mb-12 text-center font-MontBold">Our Products</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <h2 className="text-4xl mb-8 text-center font-MontBold text-green-800">Our Products</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {products.map((product, index) => (
             <div 
               key={index} 
-              className="bg-white p-6 rounded-lg shadow-md"
+              className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105"
             >
-              <img 
-                src={product.image} 
-                alt={product.name} 
-                className="w-full h-[80%] mb-4 rounded-md duration-300"
-              />
-              <h3 className="text-2xl text-center font-MontSemibold mb-2">{product.name}</h3>
-              <p className="font-MontRegular text-center text-lg">{product.size}</p>
-              <button 
-                onClick={() => handleOrderClick(product.name)}
-                className="block mx-auto mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300"
-              >
-                Order Now
-              </button>
+              <div className="relative h-48 bg-green-100">
+                <img 
+                  src={product.image} 
+                  alt={product.name} 
+                  className="w-42 h-full mx-auto object-contain"
+                />
+                <div className="absolute top-0 right-0 bg-green-500 text-white px-2 py-1 rounded-bl-lg">
+                  {product.size}
+                </div>
+              </div>
+              <div className="p-4">
+                <h3 className="text-xl font-MontSemibold mb-2 text-green-800 text-center">{product.name}</h3>
+                <button 
+                  onClick={() => handleOrderClick(product.name)}
+                  className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition duration-300"
+                >
+                  Order Now
+                </button>
+              </div>
             </div>
           ))}
         </div>
@@ -74,8 +90,8 @@ const Products: React.FC = () => {
       {/* Popup Form */}
       {isPopupOpen && (
         <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50">
-          <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">
-            <h2 className="text-2xl font-MontBold mb-4">Order {selectedProduct}</h2>
+          <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg relative">
+            <h2 className="text-2xl font-MontBold mb-4 text-green-800">Order {selectedProduct}</h2>
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label htmlFor="name" className="block text-gray-700 font-medium mb-1">Your Name</label>
@@ -85,7 +101,7 @@ const Products: React.FC = () => {
                   name="name" 
                   value={formData.name} 
                   onChange={handleChange} 
-                  className="w-full border-gray-300 rounded-lg p-2"
+                  className="w-full border-gray-300 rounded-lg p-2 focus:ring-green-500 focus:border-green-500"
                   required
                 />
               </div>
@@ -97,7 +113,7 @@ const Products: React.FC = () => {
                   name="mobile" 
                   value={formData.mobile} 
                   onChange={handleChange} 
-                  className="w-full border-gray-300 rounded-lg p-2"
+                  className="w-full border-gray-300 rounded-lg p-2 focus:ring-green-500 focus:border-green-500"
                   required
                 />
               </div>
@@ -109,7 +125,7 @@ const Products: React.FC = () => {
                   name="email" 
                   value={formData.email} 
                   onChange={handleChange} 
-                  className="w-full border-gray-300 rounded-lg p-2"
+                  className="w-full border-gray-300 rounded-lg p-2 focus:ring-green-500 focus:border-green-500"
                   required
                 />
               </div>
@@ -121,17 +137,23 @@ const Products: React.FC = () => {
                   name="bottleName" 
                   value={formData.bottleName} 
                   onChange={handleChange} 
-                  className="w-full border-gray-300 rounded-lg p-2"
+                  className="w-full border-gray-300 rounded-lg p-2 focus:ring-green-500 focus:border-green-500"
                 />
               </div>
               <button 
                 type="submit"
-                className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300"
+                className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition duration-300"
               >
                 Submit Order
               </button>
             </form>
             {message && <p className="mt-4 text-center text-green-600">{message}</p>}
+            <button 
+              onClick={handleCancelOrder}
+              className="w-full mt-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded transition duration-300"
+            >
+              Cancel Order
+            </button>
             <button 
               onClick={() => setIsPopupOpen(false)}
               className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"

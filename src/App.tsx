@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Review from './pages/Review';
-import Products from './components/Products';
+import Products from './pages/Products';
 import About from './components/About';
 
 const App: React.FC = () => {
